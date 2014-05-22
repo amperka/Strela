@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map For Strela
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Strela                         KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin                          KEYWORD2
+motors                         KEYWORD2
+motorSpeed                     KEYWORD2
+motorConnection                KEYWORD2
+ledWrite                       KEYWORD2
+buttonRead                     KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+M1                             LITERAL1
+M2                             LITERAL1
+L1                             LITERAL1
+L2                             LITERAL1
+L3                             LITERAL1
+L4                             LITERAL1
+S1                             LITERAL1
+S2                             LITERAL1
+S3                             LITERAL1
+S4                             LITERAL1
+
