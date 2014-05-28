@@ -17,6 +17,8 @@
 #define WIRE_OUTPUT_WRITE_MODE   0x01
 #define WIRE_INPUT_READ_MODE     0x00
 
+#define STRELA_INIT_CHECK if (!strelaInit) strelaInitialize()
+
 
 // IO-pin defines
 
@@ -91,36 +93,40 @@
 #define LAST_PIN LS7
 
 //Buttons
-#define S1 LS3
-#define S2 LS2
-#define S3 LS1
-#define S4 LS0
+#define S1 50
+#define S2 51
+#define S3 52
+#define S4 53
 //Leds
-#define L1 LS7
-#define L2 LS6
-#define L3 LS5
-#define L4 LS4
-
-//Перевод из Sx или Lx в LSx
-#define _LS_S(x) ((3-(x))+LS0)
-#define _LS_L(x) ((7-(x))+LS0)
-//Перевод из LSx в Sx или Lx
-#define _S_LS(x) ((3-((x)-LS0)
-#define _L_LS(x) ((7-((x)-LS0)
-
+#define L1 60
+#define L2 61
+#define L3 62
+#define L4 63
 
 //Motors
 #define M1 0
 #define M2 1
 
+void strelaInitialize();
 
 void uPinMode(uint8_t pin, uint8_t mode);
 
 void uDigitalWrite(uint8_t pin, uint8_t val);
 
 uint8_t uDigitalRead(uint8_t pin);
-            
 
+void drive(
+    int motorSpeed_1,
+    int motorSpeed_2);
+    
+void motorSpeed(uint8_t motor, int speed);
+
+        
+void motorConnection(
+    bool direction_1,
+    bool direction_2);
+            
+/*
 class Strela
 {
     public:
@@ -162,5 +168,6 @@ class Strela
         
 };
 
+*/
 
 #endif
