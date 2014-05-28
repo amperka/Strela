@@ -332,27 +332,3 @@ void drive(
     _setMotorSpeed_2(motorSpeed_2);
 
 }
-
-/*
-bool Strela::buttonRead(uint8_t btn)
-{
-    if (btn < 4) 
-        return twiReadIn(GPUX_TWI_ADDR, (3 - btn));
-    else
-        return uDigitalRead(btn);    
-}
-
-void Strela::ledWrite(
-            uint8_t ld,
-            bool state)
-{
-    if (ld < 4) 
-    {
-        (state) ? ledState |= 1 << (7 - ld) : ledState &= ~(1 << (7 - ld));
-        twiWriteOut(GPUX_TWI_ADDR, ledState);  
-    }
-    else 
-        uDigitalWrite(ld, state);
-}
-
-*/

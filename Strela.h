@@ -125,49 +125,6 @@ void motorSpeed(uint8_t motor, int speed);
 void motorConnection(
     bool direction_1,
     bool direction_2);
-            
-/*
-class Strela
-{
-    public:
-        void begin();
-        
-        void drive(
-            int motorSpeed_1,
-            int motorSpeed_2);
-        
-        void motorConnection(
-            bool direction_1,
-            bool direction_2);
-            
-        void ledWrite(
-            uint8_t ld,
-            bool state);    
-            
-        bool buttonRead(uint8_t btn);
-        
-        void onTimerInterrupt();
 
-    
-    private:
-        
-        uint8_t _currentMotorSpeed_1;
-        uint8_t _currentMotorSpeed_2;
-        uint8_t _pwmCounter;
-        bool _motorConnection_1;
-        bool _motorConnection_2;
-        
-        void _setMotorDirections(
-            bool direction_1,
-            bool direction_2);
-            
-        void _setPWM9(uint8_t pwm);
-        void _setPWM10(uint8_t pwm);
-        
-        
-        
-};
-
-*/
 
 #endif
