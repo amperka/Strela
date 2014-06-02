@@ -53,7 +53,7 @@
 #define P10 37 
 
 //LiquidCrystall
-//LCx вид (для LiquidCrystal_I2C.h)
+//LCx РІРёРґ (РґР»СЏ LiquidCrystal_I2C.h)
 #define LC_ADDR    LCD_TWI_ADDR
 
 #define LC4 0
@@ -64,7 +64,7 @@
 #define LCRW 5
 #define LCRS 6
 
-//Qx вид (для uSerialWrite())
+//Qx РІРёРґ (РґР»СЏ uSerialWrite())
 #define Q0 30 //NUM_DIGITAL_PINS 
 #define Q1 31
 #define Q2 32
@@ -74,9 +74,9 @@
 #define Q6 36
 #define Q7 P10
 
-//Перевод из Qx в LCx
+//РџРµСЂРµРІРѕРґ РёР· Qx РІ LCx
 #define _LC(q) ((q)-Q0)
-//Перевод из LCx в Qx
+//РџРµСЂРµРІРѕРґ РёР· LCx РІ Qx
 #define _Q(x) ((x)+Q0)
 
 //LED and Buttons
