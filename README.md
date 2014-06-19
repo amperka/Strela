@@ -4,7 +4,7 @@
 ”становка
 =========
 
-—копируйте директорию StepperAmperka в `$sketchbook/libraries`, где `$sketchbook` Ч ваша директори€
+—копируйте директорию Strela в `$sketchbook/libraries`, где `$sketchbook` Ч ваша директори€
 со скетчами.
 
 ѕосле этого перезагрузите Arduino IDE.
