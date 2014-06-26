@@ -1,11 +1,12 @@
-http://wiki.amperka.ru/продукты:strela
 
-���������� ��� Arduino ��������� ��������� Arduino-����������� ���������� Strela �� [�������](http://amperka.ru).
+Библиотека для Arduino позволяет управлять Arduino-совместимой платформой Strela от [Амперки](http://amperka.ru).
 
-���������
+Установка
 =========
 
-���������� ���������� Strela � `$sketchbook/libraries`, ��� `$sketchbook` � ���� ����������
-�� ��������.
+Скопируйте директорию Strela в `$sketchbook/libraries`, где `$sketchbook` — ваша директория
+со скетчами.
 
-����� ����� ������������� Arduino IDE.
+После этого перезагрузите Arduino IDE.
+
+Техническое описание платы — http://wiki.amperka.ru/продукты:strela
