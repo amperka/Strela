@@ -15,6 +15,33 @@
 #include <Strela.h>
 
 
+#define WIRE_IO_CONFIG_MODE      0x03
+#define WIRE_IO_CONFIGURATION    0x0F
+#define WIRE_OUTPUT_WRITE_MODE   0x01
+#define WIRE_INPUT_READ_MODE     0x00
+
+#define STRELA_INIT_CHECK if (!strelaInit) strelaInitialize()
+
+// IO-pin defines
+
+#undef A11  //used with buzzer
+#undef A10  //used with en12
+#undef A9   //used with en34
+#undef A6   //used with dir34
+
+#define MOTOR_ENABLE_12_PIN      10
+#define MOTOR_ENABLE_34_PIN      9
+#define MOTOR_DIRECTION_34_PIN   4
+
+#define LAST_PIN LS7
+
+//Перевод из Qx в LCx
+#define _LC(q) ((q)-Q0)
+//Перевод из LCx в Qx
+#define _Q(x) ((x)+Q0)
+
+
+
 ISR(TIMER4_OVF_vect)          // interrupt service routine for software PWM
 {
    PORTB |= _BV(5); //pin 9 HIGH
@@ -267,6 +294,17 @@ uint8_t uDigitalRead(uint8_t pin)
         return twiReadIn(LCD_TWI_ADDR, curPin);
     }        
 }
+
+int uAnalogRead(uint8_t pin)
+{
+    return analogRead(pin);
+}
+
+void uAnalogWrite(uint8_t pin, int val)
+{
+    analogWrite(pin, val);
+}
+
 
 void strelaInitialize()
 {

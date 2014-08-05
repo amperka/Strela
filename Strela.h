@@ -12,24 +12,9 @@
 
 #define GPUX_TWI_ADDR            0x20
 #define LCD_TWI_ADDR             0x21
-#define WIRE_IO_CONFIG_MODE      0x03
-#define WIRE_IO_CONFIGURATION    0x0F
-#define WIRE_OUTPUT_WRITE_MODE   0x01
-#define WIRE_INPUT_READ_MODE     0x00
-
-#define STRELA_INIT_CHECK if (!strelaInit) strelaInitialize()
-
 
 // IO-pin defines
 
-#undef A11  //used with buzzer
-#undef A10  //used with en12
-#undef A9   //used with en34
-#undef A6   //used with dir34
-
-#define MOTOR_ENABLE_12_PIN      10
-#define MOTOR_ENABLE_34_PIN      9
-#define MOTOR_DIRECTION_34_PIN   4
 #define BUZZER                   12
 
 #define P1  11
@@ -74,11 +59,6 @@
 #define Q6 36
 #define Q7 P10
 
-//Перевод из Qx в LCx
-#define _LC(q) ((q)-Q0)
-//Перевод из LCx в Qx
-#define _Q(x) ((x)+Q0)
-
 //LED and Buttons
 #define LS0 38
 #define LS1 39
@@ -89,8 +69,6 @@
 #define LS5 43
 #define LS6 44
 #define LS7 45
-
-#define LAST_PIN LS7
 
 //Buttons
 #define S1 50
@@ -114,6 +92,10 @@ void uPinMode(uint8_t pin, uint8_t mode);
 void uDigitalWrite(uint8_t pin, uint8_t val);
 
 uint8_t uDigitalRead(uint8_t pin);
+
+int uAnalogRead(uint8_t pin);
+
+void uAnalogWrite(uint8_t pin, int val);
 
 void drive(
     int motorSpeed_1,
