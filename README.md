@@ -4,7 +4,7 @@
 Установка
 =========
 
-Скопируйте директорию Strela в `$sketchbook/libraries`, где `$sketchbook` — ваша директория
+Скопируйте директории Strela и LiquidCrystal в `$sketchbook/libraries`, где `$sketchbook` — ваша директория
 со скетчами.
 
 После этого перезагрузите Arduino IDE.
