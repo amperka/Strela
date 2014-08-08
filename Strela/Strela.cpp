@@ -351,7 +351,7 @@ void motorSpeed(uint8_t motor, int speed)
     if (motor = M1)
         _setMotorSpeed_1(speed);
     else if (motor = M2)
-        _setMotorSpeed_1(speed);
+        _setMotorSpeed_2(speed);
         
 }
 
