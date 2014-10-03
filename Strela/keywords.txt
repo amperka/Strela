@@ -3,33 +3,70 @@
 #######################################
 
 #######################################
-# Datatypes (KEYWORD1)
-#######################################
-
-Strela                         KEYWORD1
-
-#######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin                          KEYWORD2
-motors                         KEYWORD2
-motorSpeed                     KEYWORD2
-motorConnection                KEYWORD2
-ledWrite                       KEYWORD2
-buttonRead                     KEYWORD2
+strelaInitialize	KEYWORD2
+uPinMode	KEYWORD2
+uDigitalWrite	KEYWORD2
+uDigitalRead	KEYWORD2
+uAnalogRead	KEYWORD2
+uAnalogWrite	KEYWORD2
+drive	KEYWORD2
+motorSpeed	KEYWORD2
+motorConnection	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-M1                             LITERAL1
-M2                             LITERAL1
-L1                             LITERAL1
-L2                             LITERAL1
-L3                             LITERAL1
-L4                             LITERAL1
-S1                             LITERAL1
-S2                             LITERAL1
-S3                             LITERAL1
-S4                             LITERAL1
 
+GPUX_TWI_ADDR	LITERAL1
+LCD_TWI_ADDR	LITERAL1
+BUZZER	LITERAL1
+P1	LITERAL1
+P2	LITERAL1
+P3	LITERAL1
+P4	LITERAL1
+P5	LITERAL1
+P6	LITERAL1
+P7	LITERAL1
+P8	LITERAL1
+P9	LITERAL1
+P11	LITERAL1
+P12	LITERAL1
+IR_PIN	LITERAL1
+P10	LITERAL1
+LC_ADDR	LITERAL1
+LC4	LITERAL1
+LC5	LITERAL1
+LC6	LITERAL1
+LC7	LITERAL1
+LCEN	LITERAL1
+LCRW	LITERAL1
+LCRS	LITERAL1
+Q0	LITERAL1
+Q1	LITERAL1
+Q2	LITERAL1
+Q3	LITERAL1
+Q4	LITERAL1
+Q5	LITERAL1
+Q6	LITERAL1
+Q7	LITERAL1
+LS0	LITERAL1
+LS1	LITERAL1
+LS2	LITERAL1
+LS3	LITERAL1
+LS4	LITERAL1
+LS5	LITERAL1
+LS6	LITERAL1
+LS7	LITERAL1
+S1	LITERAL1
+S2	LITERAL1
+S3	LITERAL1
+S4	LITERAL1
+L1	LITERAL1
+L2	LITERAL1
+L3	LITERAL1
+L4	LITERAL1
+M1	LITERAL1
+M2	LITERAL1
