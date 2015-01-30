@@ -9,7 +9,7 @@ Strela
 
 Скачайте последний [релиз библиотеки](https://github.com/amperka/Strela/releases/download/1.0.0/strela-1.0.0.zip):
 
-<a href="https://github.com/amperka/Strela/releases/download/1.0.0/strela-1.0.0.zip"><img src="https://raw.githubusercontent.com/amperka/Strela/master/download.png" alt="Кнопка загрузки"/></a>
+<a href="https://github.com/amperka/Strela/releases/download/1.0.0/strela-1.0.0.zip"><img src="https://raw.githubusercontent.com/amperka/Strela/release_candidate/download.png" alt="Кнопка загрузки"/></a>
 
 В Arduino IDE выберите пункт меню «Скетч» → «Импортировать библиотеку» →
 «Добавить библиотеку…». В появившемся окне выберите скачаный архив с
