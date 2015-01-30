@@ -5,6 +5,7 @@
 =========
 
 Скачайте архив с библиотекой, нажав на кнопку «Download ZIP».
+
 Скопируйте директории Strela и LiquidCrystal в `$sketchbook/libraries`, где `$sketchbook` — ваша директория
 со скетчами.
 
