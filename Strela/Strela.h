@@ -108,5 +108,7 @@ void motorConnection(
     bool direction_1,
     bool direction_2);
 
+void stepperMotor(int stepsToMove, int stepDelay);
+
 
 #endif

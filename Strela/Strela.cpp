@@ -194,7 +194,66 @@ namespace {
     }
 
 
+    /*
+ * Moves the motor forward or backwards.
+ */
+    void _stepMotor(int thisStep)
+    {
+  
+      switch (thisStep) {
+        case 0:    // 1, 1, 0, 0
+        PORTB |= _BV(5);
+        PORTD |= _BV(4);
+        PORTB &= ~_BV(6);
+        PORTE &= ~_BV(2);
+        break;
+        case 1:    // 1, 1, 1, 1
+        PORTB |= _BV(5);
+        PORTD |= _BV(4);
+        PORTB |=_BV(6);
+        PORTE |= _BV(2);
+        break;
+        case 2:    //0, 0, 1, 1
+        PORTB &= ~_BV(5);
+        PORTD &= ~_BV(4);
+        PORTB |=_BV(6);
+        PORTE |= _BV(2);
+        break;
+        case 3:    //1, 0, 1, 1
+        PORTB |= _BV(5);
+        PORTD &= ~_BV(4);
+        PORTB |=_BV(6);
+        PORTE |= _BV(2);
+        break;
     
+        case 4:    // 1, 0, 0, 0
+        PORTB |= _BV(5);
+        PORTD &= ~_BV(4);
+        PORTB &= ~_BV(6);
+        PORTE &= ~_BV(2);
+        break;
+        case 5:    // 1, 0, 1, 0
+        PORTB |= _BV(5);
+        PORTD &= ~_BV(4);
+        PORTB |=_BV(6);
+        PORTE &= ~_BV(2);
+        break;
+        case 6:    //0, 0, 1, 0
+        PORTB &= ~_BV(5);
+        PORTD &= ~_BV(4);
+        PORTB |=_BV(6);
+        PORTE &= ~_BV(2);
+        break;
+        case 7:    //1, 1, 1, 0
+        PORTB |= _BV(5);
+        PORTD |= _BV(4);
+        PORTB |=_BV(6);
+        PORTE &= ~_BV(2);
+        break;
+      }
+    
+    }
+
 }
 
 
@@ -368,5 +427,42 @@ void drive(
     
     //Motor2 PWM is hardware 
     _setMotorSpeed_2(motorSpeed_2);
+
+}
+
+
+void stepperMotor(int stepsToMove, int stepDelay) 
+{
+    STRELA_INIT_CHECK;
+
+  motorSpeed(0,0);
+
+  int stepsLeft = abs(stepsToMove);  // how many steps to take
+  
+  static uint8_t stepNumber = 0;
+
+  unsigned long lastStepTime = 0;
+
+  // decrement the number of steps, moving one step each time:
+  while(stepsLeft > 0) {
+
+    // move only if the appropriate delay has passed:
+    if (millis() - lastStepTime >= stepDelay) {
+      // get the timeStamp of when you stepped:
+      lastStepTime = millis();
+      // increment or decrement the step number,
+      // depending on direction:
+      if (stepsToMove > 0) 
+        stepNumber++;      
+      else       
+        stepNumber--;
+      
+      // decrement the steps left:
+      stepsLeft--;
+
+        // step the motor to step number 0, 1, 2, 3, 4, 5, 6, 7, 8:
+        _stepMotor(stepNumber %= 8);
+    }
+  }
 
 }
