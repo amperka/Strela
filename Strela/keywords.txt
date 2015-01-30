@@ -15,6 +15,7 @@ uAnalogWrite	KEYWORD2
 drive	KEYWORD2
 motorSpeed	KEYWORD2
 motorConnection	KEYWORD2
+stepperMotor	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
